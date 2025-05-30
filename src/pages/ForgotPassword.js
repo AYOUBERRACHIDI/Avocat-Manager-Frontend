@@ -330,7 +330,7 @@ function ForgotPassword() {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        'http://express-backend-3dhb.onrender.com:5000/api/auth/forgot-password',
+        'https://express-backend-3dhb.onrender.com/api/auth/forgot-password',
         { email }
       );
       toast.success(response.data.message);

@@ -463,7 +463,7 @@ const casesChange = getPercentageChange(stats.totalCases, stats.previousTotalCas
           return;
         }
 
-        const response = await fetch('http://express-backend-3dhb.onrender.com:5000/api/affaires/stats', {
+        const response = await fetch('https://express-backend-3dhb.onrender.com/api/affaires/stats', {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
@@ -497,7 +497,7 @@ const casesChange = getPercentageChange(stats.totalCases, stats.previousTotalCas
           return;
         }
 
-        const response = await fetch('http://express-backend-3dhb.onrender.com:5000/api/affaires', {
+        const response = await fetch('https://express-backend-3dhb.onrender.com/api/affaires', {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
@@ -536,7 +536,7 @@ const casesChange = getPercentageChange(stats.totalCases, stats.previousTotalCas
           navigate('/login');
           return;
         }
-        const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/sessions', {
+        const response = await axios.get('https://express-backend-3dhb.onrender.com/api/sessions', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const validSessions = validateAndConvertSessions(response.data);
@@ -605,7 +605,7 @@ const casesChange = getPercentageChange(stats.totalCases, stats.previousTotalCas
         return;
       }
 
-      const response = await axios.get(`http://express-backend-3dhb.onrender.com:5000/api/sessions/day/pdf?date=${formattedDate}`, {
+      const response = await axios.get(`https://express-backend-3dhb.onrender.com/api/sessions/day/pdf?date=${formattedDate}`, {
         headers: { Authorization: `Bearer ${token}` },
         responseType: 'blob',
       });

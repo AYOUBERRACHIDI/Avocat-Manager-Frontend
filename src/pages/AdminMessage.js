@@ -420,7 +420,7 @@ function Messages() {
 
     setIsLoading(true);
     try {
-      const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/admin/messages', {
+      const response = await axios.get('https://express-backend-3dhb.onrender.com/api/admin/messages', {
         headers: { Authorization: `Bearer ${token}` },
         params: { page: pageNum, limit, search: searchTerm },
       });
@@ -471,7 +471,7 @@ function Messages() {
     }
 
     try {
-      await axios.post(`http://express-backend-3dhb.onrender.com:5000/api/admin/messages/${selectedMessage._id}/reply`, replyForm, {
+      await axios.post(`https://express-backend-3dhb.onrender.com/api/admin/messages/${selectedMessage._id}/reply`, replyForm, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success('تم إرسال الرد بنجاح');
@@ -501,7 +501,7 @@ function Messages() {
     }
 
     try {
-      await axios.delete(`http://express-backend-3dhb.onrender.com:5000/api/admin/messages/${selectedMessage._id}`, {
+      await axios.delete(`https://express-backend-3dhb.onrender.com/api/admin/messages/${selectedMessage._id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success('تم حذف الرسالة بنجاح');

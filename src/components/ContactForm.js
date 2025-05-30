@@ -247,7 +247,7 @@ function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://express-backend-3dhb.onrender.com:5000/api/admin/messages', formData);
+      await axios.post('https://express-backend-3dhb.onrender.com/api/admin/messages', formData);
       toast.success('تم إرسال الرسالة بنجاح!');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {

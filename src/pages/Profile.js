@@ -307,7 +307,7 @@ function Profile() {
         return;
       }
 
-      const response = await fetch('http://express-backend-3dhb.onrender.com:5000/api/avocats/me', {
+      const response = await fetch('https://express-backend-3dhb.onrender.com/api/avocats/me', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
@@ -451,7 +451,7 @@ function Profile() {
         formDataToSend.append('logo', logoFile);
       }
 
-      const profileResponse = await fetch(`http://express-backend-3dhb.onrender.com:5000/api/avocats/${avocatId}`, {
+      const profileResponse = await fetch(`https://express-backend-3dhb.onrender.com/api/avocats/${avocatId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -465,7 +465,7 @@ function Profile() {
       }
 
       if (formData.currentPassword && formData.newPassword) {
-        const passwordResponse = await fetch('http://express-backend-3dhb.onrender.com:5000/api/avocats/me/password', {
+        const passwordResponse = await fetch('https://express-backend-3dhb.onrender.com/api/avocats/me/password', {
           method: 'PUT',
           headers: {
             'Authorization': `Bearer ${token}`,

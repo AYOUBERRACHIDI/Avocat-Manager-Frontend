@@ -878,8 +878,8 @@ const selectStyles = {
   }),
 };
 
-const API_URL = 'http://express-backend-3dhb.onrender.com:5000/api/affaires';
-const CLIENTS_API_URL = 'http://express-backend-3dhb.onrender.com:5000/api/clients';
+const API_URL = 'https://express-backend-3dhb.onrender.com/api/affaires';
+const CLIENTS_API_URL = 'https://express-backend-3dhb.onrender.com/api/clients';
 
 const CASE_TYPES = {
   civil: [

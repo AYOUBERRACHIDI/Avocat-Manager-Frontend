@@ -185,7 +185,7 @@ function NavDash() {
           return;
         }
 
-        const response = await fetch('http://express-backend-3dhb.onrender.com:5000/api/avocats/me', {
+        const response = await fetch('https://express-backend-3dhb.onrender.com/api/avocats/me', {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',

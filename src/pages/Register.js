@@ -209,7 +209,7 @@ function Register({ setToken }) {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://express-backend-3dhb.onrender.com:5000/api/auth/register', 
+        'https://express-backend-3dhb.onrender.com/api/auth/register', 
         formData
       );
       setToken(response.data.token);

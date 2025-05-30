@@ -217,7 +217,7 @@ function ResetPassword() {
     }
     try {
       const response = await axios.post(
-        'http://express-backend-3dhb.onrender.com:5000/api/auth/reset-password',
+        'https://express-backend-3dhb.onrender.com/api/auth/reset-password',
         {
           email,
           otp,

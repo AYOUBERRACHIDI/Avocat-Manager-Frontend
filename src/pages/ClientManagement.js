@@ -465,7 +465,7 @@ const SearchBar = ({ onSearch, placeholder = 'بحث...', initialValue = '', cla
   );
 };
 
-const API_URL = 'http://express-backend-3dhb.onrender.com:5000/api/clients';
+const API_URL = 'https://express-backend-3dhb.onrender.com/api/clients';
 
 function ClientManagement({ setToken }) {
   const [searchTerm, setSearchTerm] = useState('');

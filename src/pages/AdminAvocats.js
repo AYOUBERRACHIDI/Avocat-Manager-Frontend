@@ -415,7 +415,7 @@ function AdminAvocats() {
         return;
       }
       const response = await axios.get(
-        `http://express-backend-3dhb.onrender.com:5000/api/admin/avocats?page=${currentPage}&limit=5&search=${search}`,
+        `https://express-backend-3dhb.onrender.com/api/admin/avocats?page=${currentPage}&limit=5&search=${search}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -547,12 +547,12 @@ function AdminAvocats() {
       });
 
       if (editingId) {
-        await axios.put(`http://express-backend-3dhb.onrender.com:5000/api/admin/avocats/${editingId}`, data, {
+        await axios.put(`https://express-backend-3dhb.onrender.com/api/admin/avocats/${editingId}`, data, {
           headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'multipart/form-data' },
         });
         toast.success('تم تحديث المحامي بنجاح');
       } else {
-        await axios.post('http://express-backend-3dhb.onrender.com:5000/api/admin/avocats', data, {
+        await axios.post('https://express-backend-3dhb.onrender.com/api/admin/avocats', data, {
           headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'multipart/form-data' },
         });
         toast.success('تم إنشاء المحامي بنجاح');
@@ -586,7 +586,7 @@ function AdminAvocats() {
   const handleEdit = async id => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://express-backend-3dhb.onrender.com:5000/api/admin/avocats/${id}`, {
+      const response = await axios.get(`https://express-backend-3dhb.onrender.com/api/admin/avocats/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setFormData({ ...response.data.data, password: '', logo: null });
@@ -601,7 +601,7 @@ function AdminAvocats() {
   const handleDelete = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://express-backend-3dhb.onrender.com:5000/api/admin/avocats/${deleteId}`, {
+      await axios.delete(`https://express-backend-3dhb.onrender.com/api/admin/avocats/${deleteId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success('تم حذف المحامي بنجاح');

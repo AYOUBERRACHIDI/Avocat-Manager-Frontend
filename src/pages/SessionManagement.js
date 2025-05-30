@@ -576,10 +576,10 @@ const SearchBar = ({ onSearch, placeholder = 'بحث...', initialValue = '', cla
   );
 };
 
-const API_URL = 'http://express-backend-3dhb.onrender.com:5000/api/sessions';
-const AFFAIRES_API_URL = 'http://express-backend-3dhb.onrender.com:5000/api/affaires';
-const CLIENTS_API_URL = 'http://express-backend-3dhb.onrender.com:5000/api/clients';
-const CASE_TYPES_API_URL = 'http://express-backend-3dhb.onrender.com:5000/api/affaires/types';
+const API_URL = 'https://express-backend-3dhb.onrender.com/api/sessions';
+const AFFAIRES_API_URL = 'https://express-backend-3dhb.onrender.com/api/affaires';
+const CLIENTS_API_URL = 'https://express-backend-3dhb.onrender.com/api/clients';
+const CASE_TYPES_API_URL = 'https://express-backend-3dhb.onrender.com/api/affaires/types';
 
 const TRIBUNALS = [
   { value: 'محكمة الابتدائية - الدار البيضاء', label: 'محكمة الابتدائية - الدار البيضاء' },

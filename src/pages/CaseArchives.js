@@ -603,7 +603,7 @@ const ZoomButton = styled.button`
   }
 `;
 
-const API_URL = 'http://express-backend-3dhb.onrender.com:5000/api/affaires';
+const API_URL = 'https://express-backend-3dhb.onrender.com/api/affaires';
 
 const CaseArchives = ({ setToken }) => {
   const [showDetailsModal, setShowDetailsModal] = useState(false);

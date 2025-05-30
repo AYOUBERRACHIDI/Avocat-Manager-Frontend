@@ -372,7 +372,7 @@ function AdminSecretaires() {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.get(
-        `http://express-backend-3dhb.onrender.com:5000/api/admin/secretaires?page=${currentPage}&limit=5&search=${search}`,
+        `https://express-backend-3dhb.onrender.com/api/admin/secretaires?page=${currentPage}&limit=5&search=${search}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -391,7 +391,7 @@ function AdminSecretaires() {
   const fetchAvocats = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/admin/avocats', {
+      const response = await axios.get('https://express-backend-3dhb.onrender.com/api/admin/avocats', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setAvocats(response.data.data);
@@ -421,12 +421,12 @@ function AdminSecretaires() {
       const data = { ...formData };
 
       if (editingId) {
-        await axios.put(`http://express-backend-3dhb.onrender.com:5000/api/admin/secretaires/${editingId}`, data, {
+        await axios.put(`https://express-backend-3dhb.onrender.com/api/admin/secretaires/${editingId}`, data, {
           headers: { Authorization: `Bearer ${token}` },
         });
         toast.success('تم تحديث السكرتير بنجاح');
       } else {
-        await axios.post('http://express-backend-3dhb.onrender.com:5000/api/admin/secretaires', data, {
+        await axios.post('https://express-backend-3dhb.onrender.com/api/admin/secretaires', data, {
           headers: { Authorization: `Bearer ${token}` },
         });
         toast.success('تم إنشاء السكرتير بنجاح');
@@ -453,7 +453,7 @@ function AdminSecretaires() {
   const handleEdit = async id => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://express-backend-3dhb.onrender.com:5000/api/admin/secretaires/${id}`, {
+      const response = await axios.get(`https://express-backend-3dhb.onrender.com/api/admin/secretaires/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setFormData({ ...response.data.data, password: '' });
@@ -467,7 +467,7 @@ function AdminSecretaires() {
   const handleDelete = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://express-backend-3dhb.onrender.com:5000/api/admin/secretaires/${deleteId}`, {
+      await axios.delete(`https://express-backend-3dhb.onrender.com/api/admin/secretaires/${deleteId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success('تم حذف السكرتير بنجاح');

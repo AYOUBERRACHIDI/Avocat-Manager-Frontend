@@ -234,7 +234,7 @@ function AdminDashboard() {
 
     const fetchStats = async () => {
       try {
-        const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/admin/stats', {
+        const response = await axios.get('https://express-backend-3dhb.onrender.com/api/admin/stats', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setStats(response.data);
@@ -247,7 +247,7 @@ function AdminDashboard() {
 
     const fetchAvocatsByCity = async () => {
       try {
-        const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/admin/avocats-by-city', {
+        const response = await axios.get('https://express-backend-3dhb.onrender.com/api/admin/avocats-by-city', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setAvocatsByCity(response.data);
@@ -263,7 +263,7 @@ function AdminDashboard() {
 
     const fetchSecretairesByAvocat = async () => {
       try {
-        const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/admin/secretaires-by-avocat', {
+        const response = await axios.get('https://express-backend-3dhb.onrender.com/api/admin/secretaires-by-avocat', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setSecretairesByAvocat(response.data);
@@ -279,7 +279,7 @@ function AdminDashboard() {
 
     const fetchActivityLogs = async () => {
       try {
-        const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/admin/activity-logs', {
+        const response = await axios.get('https://express-backend-3dhb.onrender.com/api/admin/activity-logs', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setActivityLogs(response.data);

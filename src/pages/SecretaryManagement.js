@@ -493,7 +493,7 @@ const SearchBar = ({ onSearch, placeholder = 'بحث...', initialValue = '', cla
   );
 };
 
-const API_URL = 'http://express-backend-3dhb.onrender.com:5000/api/secretaires';
+const API_URL = 'https://express-backend-3dhb.onrender.com/api/secretaires';
 
 function SecretaryManagement({ setToken }) {
 

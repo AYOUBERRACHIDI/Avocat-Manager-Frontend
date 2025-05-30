@@ -753,7 +753,7 @@ function AttorneyCalendar() {
           navigate('/login');
           return;
         }
-        const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/rendez-vous', {
+        const response = await axios.get('https://express-backend-3dhb.onrender.com/api/rendez-vous', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const validEvents = validateAndConvertEvents(response.data);
@@ -889,7 +889,7 @@ function AttorneyCalendar() {
         return;
       }
 
-      const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/rendez-vous', {
+      const response = await axios.get('https://express-backend-3dhb.onrender.com/api/rendez-vous', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const backendEvents = validateAndConvertEvents(response.data);

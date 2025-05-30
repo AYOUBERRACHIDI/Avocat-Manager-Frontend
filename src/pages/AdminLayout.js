@@ -397,12 +397,12 @@ function AdminLayout({ children }) {
 
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/admin/me', {
+        const response = await axios.get('https://express-backend-3dhb.onrender.com/api/admin/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUserData({
           name: "إداري",
-          logo: response.data.logo ? `http://express-backend-3dhb.onrender.com:5000/${response.data.logo}` : '',
+          logo: response.data.logo ? `https://express-backend-3dhb.onrender.com/${response.data.logo}` : '',
         });
       } catch (err) {
         setUserData({ name: 'إداري', logo: '' });

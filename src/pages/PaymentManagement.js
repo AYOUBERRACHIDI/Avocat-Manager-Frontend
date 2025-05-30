@@ -743,10 +743,10 @@ const ConfirmationToast = ({ message, onConfirm, onCancel }) => (
   </ConfirmationModal>
 );
 
-const API_URL = 'http://express-backend-3dhb.onrender.com:5000/api/paiements';
-const CLIENTS_API_URL = 'http://express-backend-3dhb.onrender.com:5000/api/clients';
-const AFFAIRES_API_URL = 'http://express-backend-3dhb.onrender.com:5000/api/affaires';
-const CONSULTATIONS_API_URL = 'http://express-backend-3dhb.onrender.com:5000/api/consultations';
+const API_URL = 'https://express-backend-3dhb.onrender.com/api/paiements';
+const CLIENTS_API_URL = 'https://express-backend-3dhb.onrender.com/api/clients';
+const AFFAIRES_API_URL = 'https://express-backend-3dhb.onrender.com/api/affaires';
+const CONSULTATIONS_API_URL = 'https://express-backend-3dhb.onrender.com/api/consultations';
 
 const decodeToken = (token) => {
   try {

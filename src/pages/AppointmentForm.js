@@ -513,7 +513,7 @@ function AppointmentForm() {
           navigate('/login');
           return;
         }
-        const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/clients', {
+        const response = await axios.get('https://express-backend-3dhb.onrender.com/api/clients', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setClients(response.data);
@@ -539,7 +539,7 @@ function AppointmentForm() {
           navigate('/login');
           return;
         }
-        const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/affaires', {
+        const response = await axios.get('https://express-backend-3dhb.onrender.com/api/affaires', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setAffaires(response.data);
@@ -565,7 +565,7 @@ function AppointmentForm() {
           navigate('/login');
           return;
         }
-        const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/rendez-vous', {
+        const response = await axios.get('https://express-backend-3dhb.onrender.com/api/rendez-vous', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setEvents(response.data);
@@ -738,12 +738,12 @@ function AppointmentForm() {
 
       let response;
       if (editingEvent) {
-        response = await axios.put(`http://express-backend-3dhb.onrender.com:5000/api/rendez-vous/${editingEvent.id}`, payload, {
+        response = await axios.put(`https://express-backend-3dhb.onrender.com/api/rendez-vous/${editingEvent.id}`, payload, {
           headers: { Authorization: `Bearer ${token}` },
         });
         toast.success('تم تحديث الموعد بنجاح');
       } else {
-        response = await axios.post('http://express-backend-3dhb.onrender.com:5000/api/rendez-vous', payload, {
+        response = await axios.post('https://express-backend-3dhb.onrender.com/api/rendez-vous', payload, {
           headers: { Authorization: `Bearer ${token}` },
         });
         toast.success('تم إنشاء الموعد بنجاح');
@@ -782,10 +782,10 @@ function AppointmentForm() {
                   affaire_id: formData.affaire_id || null,
                 };
                 const response = editingEvent
-                  ? await axios.put(`http://express-backend-3dhb.onrender.com:5000/api/rendez-vous/${editingEvent.id}`, payload, {
+                  ? await axios.put(`https://express-backend-3dhb.onrender.com/api/rendez-vous/${editingEvent.id}`, payload, {
                       headers: { Authorization: `Bearer ${token}` },
                     })
-                  : await axios.post('http://express-backend-3dhb.onrender.com:5000/api/rendez-vous', payload, {
+                  : await axios.post('https://express-backend-3dhb.onrender.com/api/rendez-vous', payload, {
                       headers: { Authorization: `Bearer ${token}` },
                     });
                 toast.success(editingEvent ? 'تم تحديث الموعد بنجاح' : 'تم إنشاء الموعد بنجاح');
@@ -822,7 +822,7 @@ function AppointmentForm() {
   const handleDelete = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://express-backend-3dhb.onrender.com:5000/api/rendez-vous/${editingEvent.id}`, {
+      await axios.delete(`https://express-backend-3dhb.onrender.com/api/rendez-vous/${editingEvent.id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success('تم حذف الموعد بنجاح');

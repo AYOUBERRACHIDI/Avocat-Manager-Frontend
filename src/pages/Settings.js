@@ -100,7 +100,7 @@ function Settings() {
   const fetchAdmin = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://express-backend-3dhb.onrender.com:5000/api/admin/me', {
+      const response = await axios.get('https://express-backend-3dhb.onrender.com/api/admin/me', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setFormData(prev => ({ ...prev, email: response.data.data.email }));
@@ -134,7 +134,7 @@ function Settings() {
       if (formData.password) {
         data.password = formData.password;
       }
-      await axios.put('http://express-backend-3dhb.onrender.com:5000/api/admin/me', data, {
+      await axios.put('https://express-backend-3dhb.onrender.com/api/admin/me', data, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success('تم تحديث الإعدادات بنجاح');
